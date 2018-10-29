@@ -8,6 +8,10 @@ import org.springframework.context.annotation.Configuration;
 public class JerseyConfig extends ResourceConfig {
     public JerseyConfig() {
         packages("...");
+
+        register(IssueController.class);
+        register(ExceptionMapper.class);
+
         property(ServletProperties.FILTER_FORWARD_ON_404, true);
     }
 }

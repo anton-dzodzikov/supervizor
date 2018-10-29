@@ -7,11 +7,20 @@ public class Issue {
     private String description;
     private String status; // TODO: Rework to another domain entity IssueStatus
 
+    public Issue() {
+
+    }
+
     public Issue(String title, String description, String status) {
         this(null, title, description, status);
     }
 
     public Issue(Long parentId, String title, String description, String status) {
+        this(null, parentId, title, description, status);
+    }
+
+    public Issue(Long id, Long parentId, String title, String description, String status) {
+        this.id = id;
         this.parentId = parentId;
         this.title = title;
         this.description = description;

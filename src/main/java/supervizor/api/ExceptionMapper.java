@@ -6,6 +6,7 @@ import javax.ws.rs.ext.Provider;
 
 @Provider
 public class ExceptionMapper implements javax.ws.rs.ext.ExceptionMapper<Throwable> {
+    // TODO: Make more specific handling
     @Override
     public Response toResponse(Throwable exception) {
         return Response.serverError()
